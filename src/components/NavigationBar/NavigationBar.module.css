@@ -1,0 +1,149 @@
+.header{
+    background: #0D2134;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0 5px 8px fade(#000, 15);
+    position: relative;
+    top: 0;
+}
+
+.header .home-page {
+    padding: 0 24px;
+  }
+
+.header > h1 {
+    color: red
+}
+
+.logo { 
+    display: inline-block;
+    position: relative;
+    width: 150px;
+    line-height: 64px;
+}
+
+.logo > img {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.header > .logo > a {
+    display: block;
+}
+
+.header-menu { 
+    float: right;
+}
+
+.header-menu > .menu-item {
+    line-height: 62px;
+    display: inline-block;
+    padding: 0 20px;
+    cursor: pointer;
+    background: transparent;
+    color: white;
+    height: 64px;
+    border-bottom-color: transparent;
+    position: relative;
+    display: inline-flex;
+}
+
+.header-menu > .menu-item > a {
+    bottom: -2px;
+    color: white;
+    text-decoration: none;
+    flex-grow: 1;
+}
+
+.header-menu > .menu-item:hover{
+    color:#0AB3E4;
+    border-bottom: 2px solid #0AB3E4;
+    background-color: #132e48;
+}
+
+.header-menu > .menu-item:active{
+    color:#0AB3E4;
+    border-bottom: 2px solid white;
+
+}
+
+@media screen and (max-width: 767px) {
+    
+    .header > .logo {
+        z-index: 101;
+    }
+
+    .header .home-page-wrapper .home-page{
+        padding: 0 24px;
+    }
+
+    .header-menu {
+        height: 0;
+    }
+    
+    .header-mobile-menu {
+        height: auto;
+        float: inherit;
+        position: relative;
+        left: -24px;
+        width: 100%;
+        /* width: ~"calc(100% + 48px)"; */
+        opacity: 0;
+        overflow: hidden;
+        /* transition: opacity .3s @ease-in-out, height .3s @ease-in-out; */
+    }
+
+    .header-mobile-menu > .menu-item {
+        line-height: 62px;
+        /* display: inline-block; */
+        padding: 0 20px;
+        cursor: pointer;
+        background: #0D2134;
+        color: white;
+        height: 64px;
+        border-bottom-color: transparent;
+        position: relative;
+        display: flex;
+        }
+    
+    .header-mobile-menu > .menu-item:hover {
+        background: #2196F3;
+    }
+
+    .header-mobile-menu > .menu-item > .active {
+        border: none;
+        background: #0D2134;
+        color: white;
+    }
+
+    .header-mobile-menu {
+        height: auto;
+        float: inherit;
+        position: relative;
+        left: -24px;
+        opacity: 1;
+        overflow: hidden;
+    }
+
+    .header-mobile-menu > .menu-item > a{
+            bottom: -2px;
+            color: white;
+            text-decoration: none;
+            flex-grow: 1;
+    }
+
+
+    .header-mobile-menu .open {
+        height: auto;
+    }
+
+    .home-page .open {
+        display: flex;
+    }
+
+    .mobile-hamburger-button {
+        display: inline-block;
+        float: right;
+    }
+
+}
