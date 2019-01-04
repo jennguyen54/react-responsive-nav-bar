@@ -61,6 +61,7 @@ class App extends Component {
         mobileBottom={true}
       />,
       <CardList isMobile={isMobile}>
+
       {content.children.map((item, idx) => {
         return <Card 
         isMobile={this.state.isMobile} 

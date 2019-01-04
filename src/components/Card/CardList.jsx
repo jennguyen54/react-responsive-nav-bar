@@ -3,7 +3,7 @@ import styles from './Card.module.css';
 import cx from 'classnames';
 
 const CardList = ({isMobile, children}) => {
-    const responsive = { [styles['card-list-responsive']] : isMobile}
+    const responsive = { [styles['responsive']] : isMobile}
     return <div className={cx(styles['card-list'], styles['shadow'], responsive)}>{children}</div>
 }
 
