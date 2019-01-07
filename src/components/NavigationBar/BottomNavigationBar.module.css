@@ -33,12 +33,12 @@
     display: none;
   }
 
-
+  
   
   @media screen and (max-width: 769px) {
 
     .navbar {
-        bottom: 0 !important;
+        top: 0;
         position: fixed;
         display: inline;
     }
@@ -55,9 +55,7 @@
       float: right;
       display: block;
     }
-  }
-  
-  @media screen and (max-width: 769px) {
+
     .navbar.responsive a {
       float: none;
       display: block;
@@ -68,6 +66,17 @@
         position: relative;
         float: right;
       }
-  
+
   }
-  
+
+    
+  @media screen and (max-width: 500px) {
+
+    .navbar {
+        top: auto;
+        bottom: 0 !important;
+        position: fixed;
+        display: inline;
+    }
+
+  }

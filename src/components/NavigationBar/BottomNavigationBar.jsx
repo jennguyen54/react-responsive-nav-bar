@@ -3,7 +3,7 @@ import styles from './BottomNavigationBar.module.css';
 import cx from 'classnames';
 import Burger from 'react-css-burger';
 import { MdCall, MdDirections } from "react-icons/md";
-
+import Hider from '../Hider';
 const ActionButton = ({ children, visible }) => {
     return <a
         id="logo"
@@ -13,13 +13,6 @@ const ActionButton = ({ children, visible }) => {
     </a>
 }
 
-const Hider = ({ children, visible }) => {
-    if (!visible) {
-        return null;
-    }
-
-    return children;
-}
 class BottomNavigationBar extends React.Component {
     constructor(props) {
         super(props);
@@ -44,7 +37,7 @@ class BottomNavigationBar extends React.Component {
         delete props.dataSource;
         delete props.isMobile;
         const { phoneOpen } = this.state;
-        const { content } = this.props;
+        const { content, phonePosition } = this.props;
 
 
         const navBarChildren = content.map(item => {
@@ -59,7 +52,7 @@ class BottomNavigationBar extends React.Component {
 
         return (
             <div className={cx(styles.navbar, styles.top, { [styles.responsive]: isMobile && phoneOpen })} id="myNavbar">
-                <a className={styles['logo']} id="logo" href={"logo"}>
+                <a className={styles['logo']} id="logo">
                     <img alt={"Logo"} src="https://gw.alipayobjects.com/os/s/prod/seeconf/9b458a789d9a000312899b42a7542b9c.svg" />
                 </a>
 
@@ -85,7 +78,8 @@ class BottomNavigationBar extends React.Component {
                             style={{ padding: 0, margin: 15 }}
                             scale={0.8} />
 
-                    </div>                </Hider>
+                    </div>
+                </Hider>
 
 
             </div>
