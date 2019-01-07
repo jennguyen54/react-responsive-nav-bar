@@ -32,6 +32,8 @@
   .navbar .icon {
     display: none;
   }
+
+
   
   @media screen and (max-width: 769px) {
 
@@ -41,10 +43,14 @@
         display: inline;
     }
 
+    .navbar-hide {
+      display: none !important;
+    }
+  
     .navbar.responsive {
         position: fixed;
     }
-    .navbar a:not(:first-child) {display: none;}
+    /* .navbar a:not(:first-child) {display: none;} */
     .navbar a.icon {
       float: right;
       display: block;
