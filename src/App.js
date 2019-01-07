@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { BottomNavigationBar } from './components/NavigationBar';
 import { enquireScreen } from 'enquire-js';
-import Card, { CardList} from './components/Card';
+import Card, { CardList } from './components/Card';
+import Section from './components/Section';
+
 import socketIOClient from 'socket.io-client';
 
 let isMobile;
@@ -61,6 +63,9 @@ class App extends Component {
         content={content.children}
         mobileBottom={true}
       />,
+      <Section 
+      title={"Test Section"}
+      description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"}>
       <CardList isMobile={isMobile}>
 
       {content.children.map((item, idx) => {
@@ -69,10 +74,11 @@ class App extends Component {
         id={"card"+ item.to} 
         style={{ height: 1000 }}
         title={"Title"}>
-        {item.title.repeat(idx + 10)}
+        {item.title.repeat(idx + 30)}
         </Card>
       })}
-      </CardList>,
+      </CardList>
+      </Section>,
       content.children.map(item => {
         return <div id={item.to} style={{ height: 1000 }}>{item.title}</div>
       })
