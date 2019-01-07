@@ -5,23 +5,23 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: stretch;
     align-content: stretch;
 
 }
-.card-list .card-list-mobile {
+.card-list-responsive {
     display: flex;
     flex-direction: column;
-    /* flex-wrap: nowrap;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     align-content: center;
-    min-width: calc(100% - 5px)    ; */
+    min-width: 95%;
 
 }
 .content-card {
-    margin: 5px;
+    margin: 10px;
     border: 1px solid#f5f5f5;
     border-radius: 1px;
     padding: 4px;
@@ -29,7 +29,7 @@
     font-size: small;
     min-height: 80px;
     min-width: 48%;
-    max-width: 48%;
+    /* max-width: 48%; */
     display: flex;
     flex: 1;
     /* background-color: red; */
@@ -37,7 +37,7 @@
 
 .responsive .content-card {
     margin: 0px;
-    min-width: 100%;
+    /* min-width: 90%; */
 }
 .content-card-content {
     flex: 9;

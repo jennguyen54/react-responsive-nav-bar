@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BottomNavigationBar } from './components/NavigationBar';
 import { enquireScreen } from 'enquire-js';
 import Card, { CardList} from './components/Card';
+import socketIOClient from 'socket.io-client';
 
 let isMobile;
 
