@@ -80,3 +80,11 @@
     }
 
   }
+
+  @media screen and (max-width: 350px) {
+
+    .logo > img {
+        max-width: 100px;
+    }
+
+  }

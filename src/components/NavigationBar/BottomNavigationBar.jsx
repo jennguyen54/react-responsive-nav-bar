@@ -4,8 +4,10 @@ import cx from 'classnames';
 import Burger from 'react-css-burger';
 import { MdCall, MdDirections } from "react-icons/md";
 import Hider from '../Hider';
-const ActionButton = ({ children, visible }) => {
+const ActionButton = ({ children, href, target, visible }) => {
     return <a
+        href={href}
+        target={target}
         id="logo"
         className={cx(styles['logo'], { [styles['navbar-hide']]: visible })}
     >
@@ -58,10 +60,13 @@ class BottomNavigationBar extends React.Component {
 
                 <Hider visible={isMobile}>
                     <React.Fragment>
-                        <ActionButton visible={phoneOpen}>
+                        <ActionButton href={"tel:0000000000"} visible={phoneOpen}>
                             <MdCall color="white" size="1.5em" />
                         </ActionButton>
-                        <ActionButton visible={phoneOpen}>
+                        <ActionButton 
+                            href={"https://www.google.com/maps/dir/29.7590304,-95.3706191/Houston,+TX/@29.7597302,-95.3724926,17z/data=!3m1!4b1!4m18!1m7!3m6!1s0x8640b8b4488d8501:0xca0d02def365053b!2sHouston,+TX!3b1!8m2!3d29.7604267!4d-95.3698028!4m9!1m1!4e1!1m5!1m1!1s0x8640b8b4488d8501:0xca0d02def365053b!2m2!1d-95.3698028!2d29.7604267!3e0"}
+                            target={"_blank"}
+                            visible={phoneOpen}>
                             <MdDirections color="white" size="1.5em" />
                         </ActionButton>
                     </React.Fragment>
